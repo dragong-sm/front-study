@@ -1,4 +1,4 @@
-# front-study
+# frontend-study
 프론트엔드 공부 내용
 
 ### 1. react-basic : 리액트
