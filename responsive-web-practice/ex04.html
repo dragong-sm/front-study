@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calc 함수</title>
+    <style>
+      .message {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        padding: 0.5em;
+        border: 1px solid #000;
+        font-size: 1.5em;
+      }
+      .message_text {
+        /* width: 80%; */
+        /* 100% 에서 버튼크기(100px) 만큼 뺀 값을 width로 사용 */
+        /* 이렇게 하면 여백이 생기지 않음 */
+        width: calc(100% - 100px);
+        height: 100%;
+        border: none;
+        resize: none;
+      }
+      .message_text:focus {
+        outline: none;
+      }
+      .message_send {
+        /* width: 20%; */
+        /* 이것만 하면 여백이 생겨서 이쁘지 않음 ! */
+        /* 따라서 textarea 크기를 calc 사용해서 변경 */
+        width: 100px;
+        height: 100%;
+        border-radius: 8px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message">
+      <textarea class="message_text"></textarea>
+      <button class="message_send">전송</button>
+    </div>
+  </body>
+</html>

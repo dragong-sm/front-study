@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가변레이아웃</title>
+    <style>
+      /* 여백이 생겨도 박스 크기가 늘어나지 않도록 ! */
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        /* width: 800px; */
+        /* 가변 : body의 90% (양쪽 5%) */
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .header {
+        /* 부모(container) 기준 100% */
+        width: 100%;
+        height: 100px;
+        background-color: tomato;
+      }
+      .main {
+        float: left;
+        /* 800px 일때, 600px 이니까 4분의3 */
+        width: 75%;
+        height: 300px;
+        /* 여백은 부모요소의 width에 비례 */
+        padding: 10%;
+        background-color: orange;
+      }
+      .aside {
+        float: right;
+        width: 25%;
+        height: 300px;
+        padding: 10%;
+        /* 부모요소의 글자 크기에 비례해 계산 */
+        font-size: 5%;
+        background-color: purple;
+      }
+      .footer {
+        clear: both;
+        /* 부모(container) 기준 100% */
+        width: 100%;
+        height: 100px;
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">HEADER</div>
+      <div class="main">MAIN</div>
+      <div class="aside">ASIDE</div>
+      <div class="footer">FOOTER</div>
+    </div>
+  </body>
+</html>

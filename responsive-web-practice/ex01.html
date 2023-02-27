@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>em과 rem</title>
+    <style>
+      .outer {
+        font-size: 24px;
+      }
+      .inner {
+        /* em : 부모요소의 글꼴 크기 : 30px */
+        /* rem : html요소의 글자크기 (기본 16px) */
+        /* 패딩 & 마진 에도 사용 가능 */
+        font-size: 2rem;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: tomato;
+        /* 패딩과 마진에서의 em은 자기 자신의 글자크기에 기반 ! */
+        /* 여기서는 폰트사이즈 2rem = 패딩의 1em */
+        padding: 1em;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">고양이</div>
+    </div>
+  </body>
+</html>

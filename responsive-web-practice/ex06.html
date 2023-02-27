@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가변 이미지</title>
+    <style>
+      div {
+        width: 50%;
+      }
+      img {
+        /* width만 지정해주면 원본 이미지의 비율에 맞게 height 지정해줌 */
+        /* 100% 하면 너무 크기도 하고 .. 이미지도 깨짐 */
+
+        /* div 로 img 감싸서 사용하기도 함 ! */
+        /* 해당 부모 div의 크기에 따라 맞춰지니까 */
+        width: 100%;
+        /* 따라서 max-width 사용하여 더이상 커지지 않게 막기 */
+        max-width: 640px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="https://avatars.githubusercontent.com/u/117700630?v=4" />
+    </div>
+    <picture>
+      <!-- 추가로 보여주는 이미지 (조건에 따라) -->
+      <!-- srcset은 이미지주소, media에는 조건이 들어감) -->
+      <!-- 여러 개 추가 가능 ! -->
+      <!-- 800px 보다 커지면 보여주는 이미지 -->
+      <source
+        srcset="
+          https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMTRfNTAg%2FMDAxNjcwOTkzMzU5OTYw._WonI3sCm9D5nW82m54KGhPmOOJrqH7Pg1uLaBo313Qg.mDugiByvtK82GOJ0qSqQEHFvn9wp0Dq2gHIsVt4bLaog.JPEG.mmmnztjv%2F_MG_1259.jpg&type=a340
+        "
+        media="(min-width: 800px)"
+      />
+      <!-- 500px 보다 작아지면 보여주는 이미지 -->
+      <source
+        srcset="
+          https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjNfOTgg%2FMDAxNjcxNzg0MjA3OTM4.MFC4r463V7r1yiact5elDDqO-m-mgCB0AsdUMOUWClwg.ZMC1dVKnwFOHeMv0rwU89q6k-Nk81IWMxWO9GmQqpY8g.JPEG.abbn2%2F03-june_puppies.jpg&type=a340
+        "
+        media="(max-width: 500px)"
+      />
+      <!-- 기본 보여줄 이미지 -->
+      <img src="https://avatars.githubusercontent.com/u/117700630?v=4" />
+    </picture>
+  </body>
+</html>

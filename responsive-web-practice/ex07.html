@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가변 동영상</title>
+    <style>
+      video {
+        width: 50%;
+      }
+      .player {
+        /* 여백의 절댓값으로 고정하자 ! */
+        /* 여백의 크기는 iframe의 종횡비에 따라 정하자 */
+        padding-top: 56.25%;
+        position: relative;
+      }
+      iframe {
+        /* 이걸로는 크기 조절 안됨 ! */
+        /* width: 100%; */
+
+        /* position을 사용하기 */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <video src="https://youtu.be/wcIf3huwFhc" controls></video>
+    <div class="player">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/wcIf3huwFhc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>
