@@ -1,0 +1,19 @@
+.parent{
+ width: 300px;
+ /* height: 200px; */
+ height: 400px;
+ /* background-color:red; */
+ background-color:green;
+}
+.child{
+    width: 100px;
+    /* 자식의 높이가 부모의 요소와 같음 */
+    /* height:200px; */
+    /* height: inherit 자식 요소의 height 값을 부모요소에게 상속 받음 */
+    height: inherit;
+    /* background-color: orange; */
+    background-color: inherit;
+    position: fixed;
+    top: 100px;
+    right: 10px;
+}
