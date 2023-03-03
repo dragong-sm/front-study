@@ -1,0 +1,55 @@
+.wrap {
+  width: 400px;
+  height: 400px;
+  background-color: tomato;
+  /* container의 상위 요소인 wrap이 위치 상의 부모요소가 됨 */
+  position: relative;
+}
+
+.container {
+  width: 300px;
+  background-color: royalblue;
+  /* 구조 상의 부모 요소가 위치 상의 부모요소임을 표기 */
+  /* 만약 position 값이 없다면, 부모요소의 상위 요소를 확인 */
+  /* position: relative; */
+}
+
+.container .item {
+  border: 2px dashed red;
+  background-color: orange;
+}
+
+.container .item:nth-child(1) {
+  width: 100px;
+  height: 100px;
+}
+
+.container .item:nth-child(2) {
+  width: 140px;
+  height: 70px;
+  /* absolute : 위치상의 부모요소 기준으로 배치 */
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.container .item:nth-child(3) {
+  width: 120px;
+  height: 100px;
+  /* fixed : 요소의 위치를 고정 시킴 */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+span {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  font-size: 40px;
+  /* display: block; */
+  /* 인라인 요소에 position : absolute가 있으면 display: block이 필요 없다 */
+  /* position이 가지고 있는 display 변경 특성 떄문 ! */
+  /* relative는 dixplay 속성이 block값으로 변경되지 x => abxolute, fixed 만 ! */
+  position: absolute;
+}

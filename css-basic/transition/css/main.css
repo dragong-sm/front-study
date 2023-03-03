@@ -1,0 +1,11 @@
+div {
+  width: 100px;
+  height: 200px;
+  background-color: orange;
+  /* 전환효과 ! ,로 구분하여 각각 작성가능 */
+  transition: width 0.5s, background-color 2s ease-out 1s;
+}
+div:active {
+  width: 300px;
+  background-color: royalblue;
+}

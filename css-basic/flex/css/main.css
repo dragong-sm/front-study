@@ -1,0 +1,58 @@
+/* display : flex 적혀있으면 Flex-container */
+.container {
+  width: 500px;
+  height: 200px;
+  background-color: royalblue;
+  /* 수평정렬 */
+  display: flex;
+  /* row-reverse : 수평반대  (우 => 좌) */
+  /* flex-direction: row-reverse; */
+  /* flex-wrap : 줄바꿈여부 */
+  flex-wrap: wrap;
+  /* 주축 정렬 */
+  justify-content: center;
+  /* align-content : 교차축 정렬 (여러 줄)*/
+  /* align-content: stretch; */ /* stretch : container에 맞춰서 정렬됨 */
+  /* 교차축 정렬 (한 줄) */
+  /* align-items: flex-end; */
+  align-items: center; /* 수직 중간 정렬 */
+}
+
+/* flex가 부여된 요소의 자식 요소는 Flex-Items */
+.container .item {
+  width: 180px;
+  height: 50px;
+  border: 2px dashed red;
+  background-color: orange;
+  /* flex-shrink: 0; */
+  /* 공간 배분 전 기본 너비 없도록 설정 => 실제비율로 보기 위해 */
+  flex-basis: 0;
+}
+
+.container .item:nth-child(1) {
+  order: 1;
+  /* item의 감소 너비 비율을 0으로 설정(감소 x (기본값은 1))  */
+  flex-shrink: 0;
+}
+
+.container .item:nth-child(2) {
+  order: 2;
+  flex-shrink: 0;
+}
+
+.container .item:nth-child(3) {
+  /* item의 증가 너비 비율을 1로 설정 (기본값 0) */
+  flex-grow: 1;
+}
+
+.container .item:nth-child(4) {
+  /* 순서가 제일 먼저임 */
+  order: 0;
+  /* item의 증가 너비 비율을 1로 설정 (기본값 0) */
+  flex-grow: 1;
+}
+
+.container .item:nth-child(5) {
+  /* item의 증가 너비 비율을 2로 설정 (기본값 0) */
+  flex-grow: 2;
+}
