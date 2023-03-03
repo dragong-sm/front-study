@@ -1,0 +1,30 @@
+div{
+    font-size: 70px;
+}
+
+/* 클래스 선택자 : 10점 */
+.hello {
+    /* !important 를 사용하면 99999점 이므로, 제일 우선 */
+    /* 되도록 사용하지 말 것 ! 점수가 너무 높음 .. */
+    color : red !important;
+}
+
+/* 위 아래 클래스 선택자로 점수가 같지만, 마지막 해석 된 아래의 코드가 적용 됨 */
+.hello {
+    color : black
+}
+
+/* 태그 선택자(1점) + 클래스 선택자(10점) : 11 점 */
+div.hello{
+    color:green
+}
+
+/* 아이디 선택자 : 100점 */
+#hello{
+    color:blue
+}
+
+/* 전체선택자 : 0점 */
+*{
+    color : pink
+}

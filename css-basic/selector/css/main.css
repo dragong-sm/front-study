@@ -1,0 +1,70 @@
+.box{
+    width:100px;
+    height: 100px;
+    /* background: orange; */
+    /* 위 아래 같은 코드 */
+    background-color: orange;
+    /* 자연스럽게 변화하는 효과를 줄 수 있음 */
+    transition: 1s; 
+}
+
+/* : 뒤의 코드가 css 가상 클래스 선택자*/
+
+/* hover : 마우스가 올라가 있는 동안 */
+.box:hover{
+    width:300px;
+    background-color: royalblue;
+}
+
+/* active : 마우스를 클릭하는 동안 */
+.box:active{
+    width:250px;
+    background-color: green;
+}
+
+input{
+
+}
+
+/* focus : 해당 요소가 포커스 되어 있을 때 */
+input:focus{
+background-color: orange;
+}
+
+/* 가상 요소 선택자 */
+
+/* before : 해당하는 요소 내부 앞 쪽에 inline 요소 삽입 */
+.box::before{
+    /* content는 무조건 들어가야함! */
+    /* content:"" */
+    content:"Before"
+}
+
+/* after : 해당하는 요소 내부 뒤 쪽에 inline 요소 삽입 */
+.box::after{
+    /* content:"After" */
+    content:"";
+    /* display: block 은 inline 요소를 블럭요소로 변경 */
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: royalblue;
+}
+
+/* 속성 선택자 */
+
+/* type 이라는 속성을 가진 요소의 배경색 변경 */
+[type] {
+    background-color : blue;
+}
+
+/* type 이라는 속성을 가진 요소 중, value가 password인 요소의 배경색 변경 */
+[type="password"] {
+    background-color : red;
+}
+
+/* 전역속성 data */
+[data-fruit-name]{
+    color : green;
+    font-size : 50px;
+}

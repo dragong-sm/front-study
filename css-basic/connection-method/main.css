@@ -1,0 +1,6 @@
+/* 임포트 방식 - 직렬 */
+/* @import url("./box.css"); */
+
+div {
+    font-size :100px;
+}
