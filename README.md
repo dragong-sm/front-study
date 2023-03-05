@@ -4,7 +4,9 @@
 
 #### 2. css-basic : css 기초 및 속성
 
-### 3. react-basic : 리액트
+#### 3. javascript-basic : 자바 스크립트 선행 학습 (기초)
+
+### 5. react-basic : 리액트
 - ex01 : html 및 js 사용 & 리액트 CDN 연동
 - ex02 : JSX 사용해보기
 - ex03 : 시계만들기 (element)
@@ -17,7 +19,7 @@
 - ex10 : 테마변경하기 (Context) ⭐Context 공부 더 필요
 - ex11 : CSS변경하기 (style-components 이용)
 
-### 4. typescript-basic : 타입스크립트
+### 6. typescript-basic : 타입스크립트
   - 타입 스크립트는 자바스크립트를 기반으로 한 언어
   - 자바스크립트에서 유효한 코드는 타입스크립트에서도 유효함 !
   - 우리가 사용하는 브라우저는 typeScript 이해 x 따라서 js로 컴파일 해서 보내야 함
@@ -31,7 +33,7 @@
   - tsc -w 파일이름.ts
     - 자동으로 계속 컴파일 되도록 함 : 감시모드 ! ( Starting compilation in watch mode... )
     
-### 5. responsive-web-practice : 반응형 웹
+### 7. responsive-web-practice : 반응형 웹
 - ex01. em과 rem
   - em : 부모요소의 글꼴 크기
   - rem : html요소의 글자크기 (기본 16px)
