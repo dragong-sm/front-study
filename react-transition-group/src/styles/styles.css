@@ -1,0 +1,78 @@
+html {
+  position: relative;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  width: 50vw;
+  min-height: 50vh;
+  background-color: skyblue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.login {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+/* .page-enter {
+  opacity: 0;
+  transition: 0.3s ease-in;
+  transform: translateX(100%);
+  transform: rotateY(90deg);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 0.3s ease-in;
+  transform: rotateY(180deg);
+  transition: opacity 300ms, transform 600ms;
+}
+
+.page-exit {
+  opacity: 0;
+  transform: translateX(0%);
+  transition: 0.3s ease-in;
+  transform: rotateY(180deg);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.3s ease-in;
+  transform: rotateY(180deg);
+  transition: opacity 300ms, transform 600ms;
+} */
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}

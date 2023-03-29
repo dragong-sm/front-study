@@ -1,0 +1,8 @@
+.test-enter {
+  opacity: 0;
+}
+
+.test-enter-active {
+  opacity: 1;
+  transition: 0.5s;
+}
