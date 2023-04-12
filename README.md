@@ -1,5 +1,7 @@
 # frontend-study
+
 프론트엔드 공부 내용
+
 #### 1. html-basicForm : html 기본 구조 학습
 
 #### 2. css-basic : css 기초 및 속성
@@ -7,12 +9,14 @@
 #### 3. javascript-basic : 자바 스크립트 선행 학습 (기초)
 
 #### 4. nodeJS : nodeJS 설치 및 npm 학습
+
 - parcel 번들러
 - lodash 패키지 설치
 
 ### 5. JavaScript
 
 ### 6. react-basic : 리액트
+
 - ex01 : html 및 js 사용 & 리액트 CDN 연동
 - ex02 : JSX 사용해보기
 - ex03 : 시계만들기 (element)
@@ -26,20 +30,22 @@
 - ex11 : CSS변경하기 (style-components 이용)
 
 ### 7. typescript-basic : 타입스크립트
-  - 타입 스크립트는 자바스크립트를 기반으로 한 언어
-  - 자바스크립트에서 유효한 코드는 타입스크립트에서도 유효함 !
-  - 우리가 사용하는 브라우저는 typeScript 이해 x 따라서 js로 컴파일 해서 보내야 함
-      - tsc 파일이름.ts ( 자바스크립트 코드로 변환됨: js 로 컴파일 (파일이름.js))
-      - node 파일이름.js
-      - terminal 출력
-  - <script src="파일이름.js" defer></script>
-  - 컴파일 된 자바스크립트 파일을 index.html에 연결
-  - tsc --init
-  - tsconfig.json 생성
-  - tsc -w 파일이름.ts
-    - 자동으로 계속 컴파일 되도록 함 : 감시모드 ! ( Starting compilation in watch mode... )
-    
+
+- 타입 스크립트는 자바스크립트를 기반으로 한 언어
+- 자바스크립트에서 유효한 코드는 타입스크립트에서도 유효함 !
+- 우리가 사용하는 브라우저는 typeScript 이해 x 따라서 js로 컴파일 해서 보내야 함
+  - tsc 파일이름.ts ( 자바스크립트 코드로 변환됨: js 로 컴파일 (파일이름.js))
+  - node 파일이름.js
+  - terminal 출력
+- <script src="파일이름.js" defer></script>
+- 컴파일 된 자바스크립트 파일을 index.html에 연결
+- tsc --init
+- tsconfig.json 생성
+- tsc -w 파일이름.ts
+  - 자동으로 계속 컴파일 되도록 함 : 감시모드 ! ( Starting compilation in watch mode... )
+
 ### 8. responsive-web-practice : 반응형 웹
+
 - ex01. em과 rem
   - em : 부모요소의 글꼴 크기
   - rem : html요소의 글자크기 (기본 16px)
@@ -57,15 +63,22 @@
   - width: calc(100% - 100px); 처럼 사용
 - ex05. 미디어쿼리 (Media Query)
   - @media screen and (max-width: 800px) {
-        img {
-          width: 100px;
-          height: 50px;
-        }
-      }
+    img {
+    width: 100px;
+    height: 50px;
+    }
+    }
 - ex06. 가변 이미지
   - width만 지정해주면 원본 이미지의 비율에 맞게 height 지정
   - div로 img 감싸서 사용하기도 함(해당 부모 div의 크기에 따라 맞춰지니까)
   - max-width 사용하여 더이상 커지지 않게 막기
   - 조건에 따라 추가로 이미지 보여주기
-    - < source srcset="이미지주소"  media="조건"/>
+    - < source srcset="이미지주소" media="조건"/>
 - ex07. 가변 동영상
+
+### 9. react-transition-group : react 전환 애니메이션
+
+### 10. mock-server-test : Mock Service Worker (msw)
+
+- msw 적용 & 사용 예제
+  - api test
